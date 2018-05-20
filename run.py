@@ -30,8 +30,7 @@ try:
 
 
     launcher.load_bbio_file('cramps.bbio')                    # load a BBB universal overlay
-    #launcher.install_comp('thermistor_check.comp')
-    #launcher.install_comp('gantry.comp')                      # install a comp HAL component of not already installed
+    launcher.install_comp('thermistor_check.comp')
     launcher.start_process('configserver -d -n RIGIDBOT ~/ui')   # start the configserver
 
 #    if args.video:
@@ -45,6 +44,5 @@ except subprocess.CalledProcessError:
 
 while True:
     sleep(1)
-    print('here')
     launcher.check_processes()
 

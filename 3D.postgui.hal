@@ -1,0 +1,11 @@
+# Include your customized HAL commands here
+# The commands in this file are run after the AXIS GUI (including PyVCP panel) starts
+
+net e0.temp.set  => pyvcp.E0.Temp.set
+net e0.temp.meas => pyvcp.E0.Temp
+net e1.temp.set  => pyvcp.E1.Temp.set
+net e1.temp.meas => pyvcp.E1.Temp
+
+net hbp.temp.set  => pyvcp.Bed.Temp.set
+net hbp.temp.meas => pyvcp.Bed.Temp
+
